@@ -206,20 +206,20 @@ Dán đoạn trace chứng minh lỗi và nêu nguyên nhân có thể xảy ra.
 
 ## 3. Thay đổi đã thực hiện
 
-- Sửa gì, ở đâu:
-- Vì sao chọn thay đổi này:
+- Sửa gì, ở đâu: Sửa lại system prompt, bổ sung yêu cầu nói rõ nội dung nguồn bị cắt, không trình bày phân tích nguyên nhân như thể đã đọc toàn bộ, và không suy diễn phần bị thiếu
+- Vì sao chọn thay đổi này: Do trước đó chỉ yêu cầu nêu rõ việc dữ liệu trả về của API bị cắt ngắn (truncated), nên chỉ cần thực hiện thay đổi đơn giản này để không ảnh hưởng đến các prompt khác
 
 ## 4. So sánh hai lần chạy
 
 | Chỉ số | `eval_before.json` | `eval_after.json` |
 |---|---|---|
-| Điểm tổng | 99.73 |  |
-| Điểm case đã chọn | 96 |  |
-| Số model calls | 4 |  |
-| Token, chi phí nếu có | 2955 |  |
+| Điểm tổng | 99.73 | 100 |
+| Điểm case đã chọn | 96 | 100 |
+| Số model calls | 4 | 3 |
+| Token, chi phí nếu có | 6302 | 4765 |
 
-- Lỗi đã giải quyết:
-- Lỗi còn lại hoặc mới xuất hiện:
+- Lỗi đã giải quyết: Đã nêu được vấn đề nội dung nguồn bị cắt
+- Lỗi còn lại hoặc mới xuất hiện: không có
 
 ## 5. Giới hạn
 
